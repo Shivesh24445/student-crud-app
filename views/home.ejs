@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Info</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>Student Data</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Percentage</th>
+      <th>Edit</th>
+    </tr>
+    <% for (let user of result) { %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.percentage %>%</td>
+      <td>
+        <a href="/edit/<%= user.id %>">
+          <button>Edit marks</button>
+        </a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+</body>
+</html>
